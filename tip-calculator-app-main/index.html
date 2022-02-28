@@ -1,0 +1,57 @@
+function billWithTip() {
+let inputBill = document.querySelector("input.bill");
+let allTipPercent = document.querySelectorAll(".calc-left .numbers span");
+let peopleNumber = document.querySelector("input.number-people");
+
+let billDone = false;
+let percentDone = false;
+let peopleDone = false;
+
+// getting bill value
+let billValue = 0;
+inputBill.oninput = function () {
+billValue = Number(inputBill.value);
+billDone = true;
+};
+
+// Saving percentage value when user clicks
+let percentageValue = 0;
+allTipPercent.forEach(function (ele) {
+ele.onclick = function () {
+allTipPercent.forEach((x) => x.classList.remove("active"));
+this.classList.add("active");
+percentageValue = Number.parseInt(this.innerHTML);
+percentDone = true;
+};
+});
+
+// getting number of people
+let number = 0;
+peopleNumber.oninput = function () {
+number = Number(peopleNumber.value);
+peopleDone = true;
+};
+// placing the results
+
+let checkArr = [inputBill, peopleNumber];
+checkArr.forEach((ele) => {
+ele.addEventListener("blur", function () {
+if (billDone === true && percentDone === true && peopleDone === true) {
+let tipAmount = document.querySelector(".tip-result");
+let tipPerPerson = (
+((percentageValue / 100) * billValue) /
+number
+).toFixed(2);
+tipAmount.innerHTML = `$${tipPerPerson}`;
+let totalAmount = document.querySelector(".total-result");
+totalAmount.innerHTML = `$${(
+billValue / number +
+Number(tipPerPerson)
+).toFixed(2)}`;
+}
+});
+});
+}
+
+billWithTip();
+//

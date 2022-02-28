@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+    <title>Calculator App</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- normalize css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- START CALC -->
+    <div class="holder">
+        <div class="container">
+            <h2>Splitter</h2>
+            <div class="calc-body">
+                <div class="calc-left">
+                    <form action="">
+                        <label for="">
+                            <p class="input-title">Bill</p>
+                            <div class="input input1">
+                                <input type="text" class="bill">
+
+                            </div>
+                        </label>
+                        <div class="percentage">
+                            <p class="input-title">Select Tip %</p>
+                            <div class="numbers">
+                                <span>5%</span>
+                                <span>10%</span>
+                                <span>15%</span>
+                                <span>20%</span>
+                                <span>25%</span>
+                                <input type="text" class="custom-value" placeholder="Custom">
+                            </div>
+                        </div>
+                        <label for="">
+                            <p class="input-title">Number of people</p>
+                            <div class="input input2">
+                                <input type="text" class="number-people">
+
+                            </div>
+                        </label>
+                    </form>
+                </div>
+                <div class="calc-right">
+                    <div class="results">
+
+                        <div class="tips">
+                            <h3>Tip Amount</h3>
+                            <span class="tip-result final">$0.00</span>
+                        </div>
+                        <div class="total">
+                            <h3>Total</h3>
+                            <span class="total-result final">$0.00</span>
+                        </div>
+
+                    </div>
+
+                    <input type="reset" class="reset" value="Reset">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CALC -->
+
+    <!-- START LINKS -->
+    <div class="links">
+        <p>This is a challange from Frontend Mentor</p>
+        <a href="">Link to the challange</a>
+    </div>
+    <!-- END LINKS -->
+
+    <script src="main.js"></script>
+</body>
+
+</html>
